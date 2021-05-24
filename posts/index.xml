@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on My Cool Webpage</title>
+    <link>https://zeromomentum.me/posts/</link>
+    <description>Recent content in Posts on My Cool Webpage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 May 2021 14:18:12 -0500</lastBuildDate><atom:link href="https://zeromomentum.me/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First Post</title>
+      <link>https://zeromomentum.me/posts/my-first-post/</link>
+      <pubDate>Mon, 24 May 2021 14:18:12 -0500</pubDate>
+      
+      <guid>https://zeromomentum.me/posts/my-first-post/</guid>
+      <description>hi this is a post idk why you are here</description>
+    </item>
+    
+  </channel>
+</rss>
