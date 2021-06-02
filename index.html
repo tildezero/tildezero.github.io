@@ -19,7 +19,22 @@
 			<li> <a href = "https://github.com/zeromomentum121">github</a> </li>
 			<li> <a href = "https://dsc.lol/crusaders" target = "_blank">discord</a>
 		</ul>
-		<div id="presence></div>
-	</body>
+        <div id = "presence">
+            <h2> discord presence thing </h2>
+        </div>
+        <script>
+            (async () => {
+                const presenceDiv = document.getElementById("div")
+                const res = await fetch("https://api.lanyard.rest/v1/users/435206857276260353")
+                const req = await res.json()
+                const spotifylistening = document.createTextNode(`listening to spotify? ${req.data.listening_to_spotify}`)
+                presenceDiv.appendChild(spotifylistening)
+                if (req.listening_to_spotify) {
+                    const spotifystatus = document.createTextNode(`Current Song: ${req.data.spotify.song} by ${req.data.spotify.artist}`)
+                    presenceDiv.appendChild(spotifystatus)
+                }
+            })()
+	    </script>
+    </body>
 
 </html>
