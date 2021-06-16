@@ -30,6 +30,7 @@
                 const req = await res.json()
                 let dstatus = document.getElementById("status")
                 dstatus.innerHTML = `Discord Status: ${req.data.discord_status}`
+		let spotify = `Listening to spotify? ${req.data.listening_to_spotify ? "yes" : "no"}
             })()
 	    </script>
     </body>
