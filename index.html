@@ -26,7 +26,6 @@
         </div>
         <script>
             (async () => {
-                const presenceDiv = document.getElementById("div")
                 const res = await fetch("https://api.lanyard.rest/v1/users/435206857276260353")
                 const req = await res.json()
                 let dstatus = document.getElementById("status")
