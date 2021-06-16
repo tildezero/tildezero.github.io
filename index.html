@@ -21,18 +21,16 @@
 		</ul>
         <div id = "presence">
             <h2> discord presence thing </h2>
+		<p id="status"></p>
+		<p id="spotify"></p>
         </div>
         <script>
             (async () => {
                 const presenceDiv = document.getElementById("div")
                 const res = await fetch("https://api.lanyard.rest/v1/users/435206857276260353")
                 const req = await res.json()
-                const spotifylistening = document.createTextNode(`listening to spotify? ${req.data.listening_to_spotify}`)
-                presenceDiv.appendChild(spotifylistening)
-                if (req.listening_to_spotify) {
-                    const spotifystatus = document.createTextNode(`Current Song: ${req.data.spotify.song} by ${req.data.spotify.artist}`)
-                    presenceDiv.appendChild(spotifystatus)
-                }
+                let dstatus = document.getElementById("status")
+                dstatus.innerHTML = `Discord Status: ${dstatus.data.discord_status}`
             })()
 	    </script>
     </body>
