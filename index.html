@@ -33,7 +33,7 @@
                 dstatus.innerHTML = `Discord Status: ${req.data.discord_status}`
 		if (req.data.listening_to_spotify) {
 			let spstatus = document.getElementById("spotify")
-			spstatus.innerHTML = `Current Spotify Song: ${req.data.spotify.song} by ${req.data.spotify.artist}<br>Link: <a href="https://open.spotify.com/track/${req.data.spotify.track_id}>
+			spstatus.innerHTML = `Current Spotify Song: ${req.data.spotify.song} by ${req.data.spotify.artist}<br>Link: <a href="https://open.spotify.com/track/${req.data.spotify.track_id}>`
 		}
             })()
 	    </script>
