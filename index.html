@@ -29,14 +29,11 @@
                 const res = await fetch("https://api.lanyard.rest/v1/users/435206857276260353")
                 const req = await res.json()
                 let dstatus = document.getElementById("status")
-		let spstatus = document.getElementById("spotify")
+		
                 dstatus.innerHTML = `Discord Status: ${req.data.discord_status}`
-		let spotify = `Listening to spotify? ${req.data.listening_to_spotify}`
 		if (req.data.listening_to_spotify) {
-			spotify += `\nCurrent Song: ${req.data.spotify.song} by ${req.data.spotify.artist}\nLink: https://open.spotify.com/track/${req.data.spotify.track_id}`
-			spstatus.innerHTML = spotify
-		} else {
-			spstatus.innerHTML = spotify
+			let spstatus = document.getElementById("spotify")
+			spstatus.innerHTML = `Current Spotify Song: ${req.data.spotify.song} by ${req.data.spotify.artist}\nLink: https://open.spotify.com/track/${req.data.spotify.track_id}`
 		}
             })()
 	    </script>
