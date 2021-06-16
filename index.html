@@ -32,7 +32,12 @@
 		let spstatus = document.getElementById("spotify")
                 dstatus.innerHTML = `Discord Status: ${req.data.discord_status}`
 		let spotify = `Listening to spotify? ${req.data.listening_to_spotify}`
-		spstatus.innerHTML = spotify
+		if (req.data.listening_to_spotify) {
+			spotify += `\nCurrent Song: ${req.data.spotify.song} by ${req.data.spotify.artist}\nLink: https://open.spotify.com/track/${req.data.spotify.track_id}`
+			spstatus.innerHTML = spotify
+		} else {
+			spstatus.innerHTML = spotify
+		}
             })()
 	    </script>
     </body>
