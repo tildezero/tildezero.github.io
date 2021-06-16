@@ -29,7 +29,7 @@
                 const res = await fetch("https://api.lanyard.rest/v1/users/435206857276260353")
                 const req = await res.json()
                 let dstatus = document.getElementById("status")
-                dstatus.innerHTML = `Discord Status: ${dstatus.data.discord_status}`
+                dstatus.innerHTML = `Discord Status: ${req.data.discord_status}`
             })()
 	    </script>
     </body>
