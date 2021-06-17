@@ -9,4 +9,5 @@ its kinda bad
 
 - https://github.com/LeoColomb/perfectmotherfuckingwebsite
 - http://bettermotherfuckingwebsite.com/
+
 i kinda used styles from them
