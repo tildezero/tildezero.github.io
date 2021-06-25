@@ -38,8 +38,8 @@
 			let spstatus = document.getElementById("music")
 			spstatus.innerHTML = `Currently listening to ${req.data.spotify.song} by ${req.data.spotify.artist}<br>Link: <a href="https://open.spotify.com/track/${req.data.spotify.track_id}" target="_blank">click here</a>`
 		}
-		for (let elem of req.data.activities && !req.data.listening_to_spotify) {
-			if (elem.name === "Headset") {
+		for (let elem of req.data.activities) {
+			if (elem.name === "Headset" && !req.data.listening_to_spotify) {
 				let mstatus = document.getElementById("music")
 				mstatus.innerHTML = `Currently listening to ${elem.state} by ${elem.details} on <a href="https://headsetapp.co" target="_blank">Headset</a>`
 			}
