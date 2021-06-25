@@ -25,7 +25,7 @@
         <div id = "presence">
             <h2> discord presence thing </h2>
 		<p id="status"></p>
-		<p id="spotify"></p>
+		<p id="music"></p>
         </div>
         <script>
             (async () => {
@@ -35,8 +35,14 @@
 		
                 dstatus.innerHTML = `Discord Status: ${req.data.discord_status}`
 		if (req.data.listening_to_spotify) {
-			let spstatus = document.getElementById("spotify")
-			spstatus.innerHTML = `Current Spotify Song: ${req.data.spotify.song} by ${req.data.spotify.artist}<br>Link: <a href="https://open.spotify.com/track/${req.data.spotify.track_id}">click here</a>`
+			let spstatus = document.getElementById("music")
+			spstatus.innerHTML = `Currently listening to ${req.data.spotify.song} by ${req.data.spotify.artist}<br>Link: <a href="https://open.spotify.com/track/${req.data.spotify.track_id}" target="_blank">click here</a>`
+		}
+		for (let elem of req.data.activities && !req.data.listening_to_spotify) {
+			if (elem.name === "Headset") {
+				let mstatus = document.getElementById("music")
+				mstatus.innerHTML = `Currently listening to ${elem.state} by ${elem.details} on <a href="https://headsetapp.co" target="_blank">Headset</a>`
+			}
 		}
             })()
 	    </script>
